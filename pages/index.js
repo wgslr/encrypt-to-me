@@ -1,7 +1,15 @@
+import React from 'react'
 import Head from 'next/head'
 
 export default function Home() {
+
+  const [rage, setRage] = React.useState(undefined);
+  React.useEffect(() => {
+    import('rage-wrapper').then(setRage);
+  })
+
   return (
+
     <div className="container">
       <Head>
         <title>Create Next App</title>
@@ -14,7 +22,7 @@ export default function Home() {
         </h1>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Heer's a wasm: {rage && rage.encrypt_to_pubkey('a', 'b')}
         </p>
 
         <div className="grid">
