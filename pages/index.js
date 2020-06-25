@@ -5,7 +5,7 @@ export default function Home() {
 
   const [rage, setRage] = React.useState(undefined);
   React.useEffect(() => {
-    import('rage-wrapper').then(setRage);
+    import('@wgslr/encrypt-to-me-rage').then(setRage);
   })
 
   return (
@@ -22,7 +22,10 @@ export default function Home() {
         </h1>
 
         <p className="description">
-          Heer's a wasm: {rage && rage.encrypt_to_pubkey('a', 'b')}
+          Heer's a wasm:
+          <textarea value={rage && rage.encrypt_to_pubkey('hello', 'age1xwhfzeny7fl8mad97x8whkz4d0nc4c2nc8pq7nveynxfgra2n4asw03sq9')}>
+
+          </textarea>
         </p>
 
         <div className="grid">
