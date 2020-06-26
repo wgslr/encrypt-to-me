@@ -1199,13 +1199,10 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@wgslr/encrypt-to-me-rage@../rage-wrapper/pkg/":
-  version "0.1.0-alpha.3"
-
-"@wgslr/encrypt-to-me-rage@0.1.0-alpha.3":
-  version "0.1.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/@wgslr/encrypt-to-me-rage/-/encrypt-to-me-rage-0.1.0-alpha.3.tgz#4f31c1cb87590e44bf73c2b3c3c8c7c61f31946b"
-  integrity sha512-Y47pNY0glhU0ccbYsm0PnG+33LFWbWVbRXSVS1XyM2WPosjljXWWq30bjIaI2aYV9Zw3svNWRpczSa0+oyAgPA==
+"@wgslr/encrypt-to-me-rage@0.1.0-alpha.5":
+  version "0.1.0-alpha.5"
+  resolved "https://registry.yarnpkg.com/@wgslr/encrypt-to-me-rage/-/encrypt-to-me-rage-0.1.0-alpha.5.tgz#bb552bf5a0a979ee1cdda6ca5d3c545da28ae3a9"
+  integrity sha512-N2mplljFNnz4iksA0UkZR5eKVx7HaZvsrV1xjbUODhOZ3L+Jv/5z81DPK/8A0ZCJxdCXKub1EfhaB1P+6crh/Q==
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
