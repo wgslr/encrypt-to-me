@@ -1,0 +1,27 @@
+.container {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.textarea {
+  --margin: 1em;
+  margin: 0em;
+  max-width: 100%;
+  flex: 1;
+  margin: var(--margin);
+  /* width: 100%; */
+
+  height: 20em;
+  min-width: min(65ch, 100% - 2 * var(--margin));
+}
+
+.error,
+.error[readonly] {
+  background-color: #e18a81;
+}
+@media (min-width: 1024px) {
+  .textarea {
+    /* max-width: 50%;
+    width: 50%; */
+  }
+}
