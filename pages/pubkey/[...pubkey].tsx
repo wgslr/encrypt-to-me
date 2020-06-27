@@ -1,17 +1,19 @@
-import { GetServerSideProps, GetStaticProps, GetStaticPaths } from "next";
+import { GetServerSideProps } from "next";
 import Head from "next/head";
 import React from "react";
 import Layout from "../../components/Layout";
 import Encryptor from "../../components/Encryptor";
 
-export const getServerSideProps = async ({ params }) => {
-  const { pubkey } = params;
+interface IProps {
+  pubkey: string;
+}
 
-  console.log({ pubkey });
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+  const { pubkey } = params ?? { pubkey: [""] };
   return { props: { pubkey: (pubkey as string[]).join("/") } };
 };
 
-export default function Page({ pubkey }) {
+const Page: React.FC<IProps> = ({ pubkey }) => {
   return (
     <Layout>
       {/* <Head>
@@ -21,4 +23,6 @@ export default function Page({ pubkey }) {
       <Encryptor pubkey={pubkey} />
     </Layout>
   );
-}
+};
+
+export default Page;

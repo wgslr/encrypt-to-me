@@ -7,8 +7,8 @@ interface IProps {
 
 const Encryptor: React.FC<IProps> = ({ pubkey }) => {
   const [input, setInput] = React.useState("");
-  const [encrypted, setEncrypted] = React.useState<string>(undefined);
-  const [error, setError] = React.useState<string>(undefined);
+  const [encrypted, setEncrypted] = React.useState<string>("");
+  const [error, setError] = React.useState<string | undefined>(undefined);
   React.useEffect(() => {
     if (!input) {
       setEncrypted("");
