@@ -1,8 +1,22 @@
-import { GetServerSideProps } from "next";
+import { GetServerSideProps, GetStaticProps, GetStaticPaths } from "next";
 import Head from "next/head";
 import React from "react";
+import Layout from "../../components/layout";
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   return {
+//     paths: [],
+//     fallback: true,
+//   };
+// };
+
+// export const getStaticProps: GetStaticProps = async ({ params }) => {
+//   const { pubkey } = params;
+
+//   return { props: { pubkey: (pubkey as string[]).join("/") } };
+// };
+
+export const getServerSideProps = async ({ params }) => {
   const { pubkey } = params;
 
   console.log({ pubkey });
@@ -10,30 +24,40 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
 };
 
 export default function Page({ pubkey }) {
+  // initial render has empty pubkey because of static generation
+
+  console.log("function", { pubkey });
   const [input, setInput] = React.useState("");
   const [encrypted, setEncrypted] = React.useState(undefined);
   const [error, setError] = React.useState(undefined);
   React.useEffect(() => {
-    encrypt(input, pubkey).then(setEncrypted).catch(setError);
-  }, [input]);
+    if (pubkey) {
+      encrypt(input, pubkey)
+        .then(setEncrypted)
+        .catch((e) => {
+          console.log(e);
+          setError(e);
+        });
+    }
+  }, [input, pubkey]);
   return (
-    <>
-      <Head>
+    <Layout>
+      {/* <Head>
         <title>{pubkey}</title>
-      </Head>
+      </Head> */}
       <div>Encrypting to {pubkey}</div>
       <textarea
         value={input}
         onChange={(event) => setInput(event.target.value)}
-        style={{ width: "60em", height: "20em" }}
+        // style={{ width: "60em", height: "20em" }}
       ></textarea>
       <textarea
         disabled
         value={encrypted}
-        style={{ width: "60em", height: "20em" }}
+        // style={{ width: "60em", height: "20em" }}
       ></textarea>
-      {error && <div>{error}</div>}
-    </>
+      {(error && <div>{error.toString()}</div>) || ""}
+    </Layout>
   );
 }
 
