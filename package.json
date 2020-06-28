@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@wgslr/encrypt-to-me-rage": "0.1.0-alpha.5",
+    "@wgslr/encrypt-to-me-rage": "0.2.0-alpha.1",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1"
