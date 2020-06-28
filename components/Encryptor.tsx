@@ -40,6 +40,7 @@ const Encryptor: React.FC<IProps> = ({ pubkey }) => {
           className={`${moduleCss.textarea} ${
             (error && moduleCss.error) || ""
           }`}
+          
           readOnly
           value={error ? error : encrypted}
           // style={{ width: "60em", height: "20em" }}

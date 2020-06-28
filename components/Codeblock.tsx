@@ -1,7 +1,7 @@
 import type React from "react";
 import moduleCss from "./Codeblock.module.css";
 
-const Codeblock: React.FC<{ value?: string }> = ({ value = "" }) => {
-  return <div className={moduleCss.codeblock}>{value}</div>;
+const Codeblock: React.FC = ({ children }) => {
+  return <div className={moduleCss.codeblock}>{children}</div>;
 };
 export default Codeblock;
