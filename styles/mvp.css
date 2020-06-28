@@ -51,16 +51,6 @@ article aside {
   padding: 0.01rem 0.8rem;
 }
 
-body {
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-family: var(--font-family);
-  line-height: var(--line-height);
-  margin: 0;
-  overflow-x: hidden;
-  padding: 1rem 0;
-}
-
 footer,
 header,
 main {

@@ -1,18 +1,34 @@
 .container {
-  flex-direction: row;
   justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.textarea {
-  --margin: 1em;
-  margin: 0em;
-  max-width: 100%;
-  flex: 1;
+.pane {
+  /* --margin: 1em; */
+  /* margin: 0em; */
+  /* max-width: 100%; */
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 50%;
   margin: var(--margin);
-  /* width: 100%; */
 
   height: 20em;
-  min-width: min(65ch, 100% - 2 * var(--margin));
+  /* width: 65ch; */
+  /* min-width: min(65ch, max(100% - 2 * var(--margin), 50%)); */
+
+  min-width: 52ch; /* prevent linebreaks in encrypted text */
+  width: calc((100% - 1em)/2);
+}
+
+.pane:first-child {
+  margin-right: 1em;
+}
+.textarea {
+  height: 20em;
+  width: 100%;
+  padding: 0.3em;
 }
 
 .error,

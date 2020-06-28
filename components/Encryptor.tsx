@@ -1,5 +1,6 @@
 import React from "react";
 import moduleCss from "./Encryptor.module.css";
+import commonCss from "../styles/common.module.css";
 
 interface IProps {
   pubkey: string;
@@ -24,19 +25,27 @@ const Encryptor: React.FC<IProps> = ({ pubkey }) => {
   }, [input, pubkey]);
 
   return (
-    <section className={moduleCss.container}>
-      <textarea
-        className={moduleCss.textarea}
-        value={input}
-        onChange={(event) => setInput(event.target.value)}
-      ></textarea>
-      <textarea
-        className={`${moduleCss.textarea} ${(error && moduleCss.error) || ""}`}
-        readOnly
-        value={error ? error : encrypted}
-        // style={{ width: "60em", height: "20em" }}
-      ></textarea>
-    </section>
+    <div className={`${moduleCss.container} ${commonCss.wide}`}>
+      <div className={moduleCss.pane}>
+        Your message:
+        <textarea
+          className={moduleCss.textarea}
+          value={input}
+          onChange={(event) => setInput(event.target.value)}
+        ></textarea>
+      </div>
+      <div className={moduleCss.pane}>
+        Your message encrypted:
+        <textarea
+          className={`${moduleCss.textarea} ${
+            (error && moduleCss.error) || ""
+          }`}
+          readOnly
+          value={error ? error : encrypted}
+          // style={{ width: "60em", height: "20em" }}
+        ></textarea>
+      </div>
+    </div>
   );
 };
 export default Encryptor;
