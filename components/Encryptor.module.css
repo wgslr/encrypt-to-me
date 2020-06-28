@@ -6,25 +6,17 @@
 }
 
 .pane {
-  /* --margin: 1em; */
-  /* margin: 0em; */
-  /* max-width: 100%; */
   flex-grow: 1;
   flex-shrink: 0;
   width: 50%;
-  margin: var(--margin);
 
-  height: 20em;
-  /* width: 65ch; */
-  /* min-width: min(65ch, max(100% - 2 * var(--margin), 50%)); */
+  min-width: min(52ch, 100%); /* prevent linebreaks in encrypted text */
+  width: calc((100% - 1em) / 2);
 
-  min-width: 52ch; /* prevent linebreaks in encrypted text */
-  width: calc((100% - 1em)/2);
+  margin-left: 0.25em;
+  margin-right: 0.25em;
 }
 
-.pane:first-child {
-  margin-right: 1em;
-}
 .textarea {
   height: 20em;
   width: 100%;
@@ -35,10 +27,4 @@
 .error,
 .error[readonly] {
   background-color: #e18a81;
-}
-@media (min-width: 1024px) {
-  .textarea {
-    /* max-width: 50%;
-    width: 50%; */
-  }
 }
