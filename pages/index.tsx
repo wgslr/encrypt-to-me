@@ -36,7 +36,7 @@ const Home: React.FC<{}> = () => {
           >
             this one
           </Link>
-          , with built-in tool to encrypt a message addressed to your key.
+          , with a built-in tool to encrypt a message addressed to your key.
         </p>
       </section>
       <section className={commonCss.narrow}>

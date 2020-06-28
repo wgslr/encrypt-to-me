@@ -24,9 +24,9 @@ const Page: React.FC<IProps> = ({ pubkey }) => {
           <a href="https://github.com/FiloSottile/age">age encryption format</a>
           .
         </p>
-        Your message will be encryped using the following public key:
+        Your message will be encrypted using the following public key:
         <Codeblock>{pubkey}</Codeblock>
-        Only the person having access to corresponding private key will be able
+        Only the person having access to the corresponding private key will be able
         to read it.
       </section>
       <section>
@@ -52,6 +52,11 @@ const Page: React.FC<IProps> = ({ pubkey }) => {
           <a href="https://github.com/str4d/rage/">rage</a> and use the command:
           <Codeblock>age -a -r {pubkey}</Codeblock>
         </p>
+      </section>
+      <section className={commonCss.narrow}>
+        <h2>How to send the message?</h2>
+        Copy the encrypted text from above and paste it in your favourite email or messaging app.
+        This website does not handle message delivery, just encryption.
       </section>
       <section className={commonCss.narrow}>
         <h2>How to publish my public key?</h2>

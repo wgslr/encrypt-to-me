@@ -18,7 +18,7 @@ const Layout: React.FC<{}> = ({ children }) => {
         <footer className={commonCss.narrow}>
           <h2>Attribution</h2>
           <p>
-            Age encryption format and reference implementation was created by{" "}
+            Age encryption format and reference implementation were created by{" "}
             <a href="https://twitter.com/FiloSottile">@FiloSottile</a>.
           </p>
           <p>
