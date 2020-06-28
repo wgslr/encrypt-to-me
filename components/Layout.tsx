@@ -16,16 +16,17 @@ const Layout: React.FC<{}> = ({ children }) => {
         <footer className={commonCss.narrow}>
           <h2>Attribution</h2>
           <p>
-            Age encryption format and reference implementation was created by
-            <a href="https://twitter.com/FiloSottile">Filippo Valsorda</a>.
+            Age encryption format and reference implementation was created by{" "}
+            <a href="https://twitter.com/FiloSottile">@FiloSottile</a>.
           </p>
           <p>
             This website runs the Rust implementation of age:{" "}
-            <a href="https://github.com/str4d/rage/">rage</a> by Jack Grigg.
+            <a href="https://github.com/str4d/rage/">rage</a> by str4d.
           </p>
           <p>
             This website was built by{" "}
-            <a href="https://twitter.com/ciechosz">Wojciech Geisler</a>.
+            <a href="https://twitter.com/ciechosz">@ciechosz</a>/
+            <a href="https://github.com/wgslr/">wgslr</a>.
           </p>
         </footer>
       </div>
