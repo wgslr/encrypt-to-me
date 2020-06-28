@@ -3,6 +3,7 @@ import Head from "next/head";
 import React from "react";
 import Layout from "../../components/Layout";
 import Encryptor from "../../components/Encryptor";
+import Codeblock from "../../components/Codeblock";
 
 interface IProps {
   pubkey: string;
@@ -19,7 +20,10 @@ const Page: React.FC<IProps> = ({ pubkey }) => {
       {/* <Head>
         <title>{pubkey}</title>
       </Head> */}
-      <div>Encrypting to {pubkey}</div>
+      <div>
+        Encrypting to
+        <Codeblock value={pubkey} />
+      </div>
       <Encryptor pubkey={pubkey} />
     </Layout>
   );
