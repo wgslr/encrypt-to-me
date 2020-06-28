@@ -4,7 +4,6 @@ import commonCss from "../styles/common.module.css";
 import moduleStyles from "./Layout.module.css";
 
 const Layout: React.FC<{}> = ({ children }) => {
-  console.log({ children });
   return (
     <>
       <div className={moduleStyles["content-wrapper"]}>
