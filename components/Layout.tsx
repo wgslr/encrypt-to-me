@@ -1,7 +1,7 @@
+import Link from "next/link";
 import type React from "react";
-import utilStyles from "../styles/utils.module.css";
-import moduleStyles from "./Layout.module.css";
 import commonCss from "../styles/common.module.css";
+import moduleStyles from "./Layout.module.css";
 
 const Layout: React.FC<{}> = ({ children }) => {
   console.log({ children });
@@ -9,7 +9,9 @@ const Layout: React.FC<{}> = ({ children }) => {
     <>
       <div className={moduleStyles["content-wrapper"]}>
         <header className={commonCss.narrow}>
-          <h1>age encryption in your browser</h1>
+          <h1>
+            <Link href="/">age encryption in your browser</Link>
+          </h1>
         </header>
         <main>{children}</main>
 
@@ -26,7 +28,8 @@ const Layout: React.FC<{}> = ({ children }) => {
           <p>
             This website was built by{" "}
             <a href="https://twitter.com/ciechosz">@ciechosz</a>/
-            <a href="https://github.com/wgslr/">wgslr</a>.
+            <a href="https://github.com/wgslr/">wgslr</a>. See the source code
+            on <a href="https://github.com/wgslr/encrypt-to-me">GitHub</a>.
           </p>
         </footer>
       </div>

@@ -1,10 +1,9 @@
-import Link from "next/link";
 import { GetServerSideProps } from "next";
-import Head from "next/head";
+import Link from "next/link";
 import React from "react";
-import Layout from "../../components/Layout";
-import Encryptor from "../../components/Encryptor";
 import Codeblock from "../../components/Codeblock";
+import Encryptor from "../../components/Encryptor";
+import Layout from "../../components/Layout";
 import commonCss from "../../styles/common.module.css";
 
 interface IProps {
@@ -42,8 +41,8 @@ const Page: React.FC<IProps> = ({ pubkey }) => {
           tools (F12).
         </p>
         <p>
-          Therefore this process is as secure as your browser. Be mindful of
-          browser extensions, some of which may send everything you type to
+          Therefore this process is <b>as secure as your browser</b>. Be mindful
+          of browser extensions, some of which may send everything you type to
           their servers.
         </p>
         <p>
